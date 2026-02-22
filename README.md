@@ -35,6 +35,3 @@ sudo bash start-all-services.sh
 
 ---
 
-**项目**: 内蒙古科技大学党组织生活会议管理系统  
-**版本**: v1.0  
-**作者**: MiniMax Agent
