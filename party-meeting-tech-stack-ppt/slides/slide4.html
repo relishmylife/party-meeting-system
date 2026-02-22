@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720">
+    <title>技术架构总览</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background: #FFFFFF;
+            padding: 80px 120px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .page-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 48px;
+        }
+        
+        .architecture-diagram {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+        }
+        
+        .arch-layer {
+            width: 800px;
+            height: 60px;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            position: relative;
+        }
+        
+        .arch-layer.highlight {
+            border-color: #C8102E;
+            border-width: 2px;
+        }
+        
+        .layer-label {
+            font-size: 24px;
+            font-weight: 500;
+            color: #000000;
+        }
+        
+        .layer-tech {
+            font-size: 18px;
+            font-weight: 400;
+            color: #666666;
+        }
+        
+        .arrow {
+            width: 2px;
+            height: 20px;
+            background: #D4A017;
+            position: absolute;
+            bottom: -26px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .arrow::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 8px solid #D4A017;
+        }
+        
+        .page-number {
+            position: absolute;
+            bottom: 40px;
+            right: 120px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #666666;
+        }
+        
+        .logo-small {
+            position: absolute;
+            top: 40px;
+            right: 120px;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #D4A017;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #D4A017;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="logo-small">党</div>
+        
+        <h2 class="page-title">技术架构总览</h2>
+        
+        <div class="architecture-diagram">
+            <div class="arch-layer">
+                <span class="layer-label">前端层</span>
+                <span class="layer-tech">React 18, TypeScript, Vite, TailwindCSS</span>
+                <div class="arrow"></div>
+            </div>
+            
+            <div class="arch-layer highlight">
+                <span class="layer-label">应用层</span>
+                <span class="layer-tech">Supabase Edge Functions, Deno Runtime</span>
+                <div class="arrow"></div>
+            </div>
+            
+            <div class="arch-layer">
+                <span class="layer-label">数据层</span>
+                <span class="layer-tech">PostgreSQL, Row Level Security, Realtime</span>
+                <div class="arrow"></div>
+            </div>
+            
+            <div class="arch-layer">
+                <span class="layer-label">基础设施层</span>
+                <span class="layer-tech">Supabase Cloud, MiniMax Space</span>
+            </div>
+        </div>
+        
+        <div class="page-number">4 / 10</div>
+    </div>
+</body>
+</html>

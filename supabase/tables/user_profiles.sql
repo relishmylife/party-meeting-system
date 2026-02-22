@@ -1,0 +1,23 @@
+CREATE TABLE user_profiles (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID NOT NULL UNIQUE,
+    org_id UUID,
+    employee_id VARCHAR(50),
+    full_name VARCHAR(100) NOT NULL,
+    nickname VARCHAR(50),
+    avatar_url TEXT,
+    phone VARCHAR(20),
+    gender VARCHAR(10),
+    birth_date DATE,
+    join_party_date DATE,
+    party_branch VARCHAR(100),
+    position VARCHAR(50),
+    role VARCHAR(20) DEFAULT 'member',
+    status VARCHAR(20) DEFAULT 'active',
+    last_login_at TIMESTAMP,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW(),
+    created_by UUID,
+    updated_by UUID,
+    is_deleted BOOLEAN DEFAULT FALSE
+);

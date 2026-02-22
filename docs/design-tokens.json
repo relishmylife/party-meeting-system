@@ -1,0 +1,158 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/tokens.schema.json",
+  "color": {
+    "primary": {
+      "50": { "value": "#FEF2F2", "type": "color", "description": "淡红背景、悬停状态" },
+      "100": { "value": "#FEE2E2", "type": "color", "description": "标签、徽章背景" },
+      "500": { "value": "#C8102E", "type": "color", "description": "品牌红-主按钮、主要链接 (WCAG 5.8:1)" },
+      "600": { "value": "#A50D25", "type": "color", "description": "按钮悬停、激活状态 (WCAG 7.2:1)" },
+      "700": { "value": "#8B0A1F", "type": "color", "description": "导航栏背景、深色区域 (WCAG 9.8:1)" },
+      "800": { "value": "#6E081A", "type": "color", "description": "辅助导航背景-酒红色 (WCAG 12.5:1)" },
+      "900": { "value": "#4A0511", "type": "color", "description": "极深红色、页脚背景 (WCAG 15.2:1)" }
+    },
+    "accent": {
+      "50": { "value": "#FFFBEB", "type": "color", "description": "金色背景淡化" },
+      "100": { "value": "#FEF3C7", "type": "color", "description": "提示背景" },
+      "400": { "value": "#FBBF24", "type": "color", "description": "金色文字（浅背景）" },
+      "500": { "value": "#F59E0B", "type": "color", "description": "橙金色-核心强调、重要通知 (WCAG 4.8:1 vs primary-700)" },
+      "600": { "value": "#D97706", "type": "color", "description": "深金色-金色按钮、徽章 (WCAG 6.2:1 vs primary-700)" }
+    },
+    "neutral": {
+      "50": { "value": "#FAFAFA", "type": "color", "description": "页面主背景" },
+      "100": { "value": "#F5F5F5", "type": "color", "description": "卡片背景" },
+      "200": { "value": "#E5E5E5", "type": "color", "description": "分割线、边框" },
+      "300": { "value": "#D4D4D4", "type": "color", "description": "输入框边框" },
+      "400": { "value": "#A3A3A3", "type": "color", "description": "占位符文字" },
+      "500": { "value": "#737373", "type": "color", "description": "次要信息文字" },
+      "600": { "value": "#525252", "type": "color", "description": "副标题文字" },
+      "700": { "value": "#404040", "type": "color", "description": "主要文字 (WCAG 10.4:1)" },
+      "800": { "value": "#262626", "type": "color", "description": "标题文字 (WCAG 14.2:1)" },
+      "900": { "value": "#171717", "type": "color", "description": "深色文字、深色模式背景" }
+    },
+    "semantic": {
+      "success": { "value": "#16A34A", "type": "color", "description": "成功状态、完成标识" },
+      "warning": { "value": "#F59E0B", "type": "color", "description": "警告提示（复用金色）" },
+      "error": { "value": "#DC2626", "type": "color", "description": "错误提示、删除操作" },
+      "info": { "value": "#2563EB", "type": "color", "description": "信息提示、帮助说明" }
+    },
+    "background": {
+      "page": { "value": "#FAFAFA", "type": "color", "description": "页面主背景" },
+      "card": { "value": "#FFFFFF", "type": "color", "description": "卡片/内容区背景" }
+    },
+    "text": {
+      "primary": { "value": "#262626", "type": "color", "description": "主要标题文字" },
+      "secondary": { "value": "#525252", "type": "color", "description": "副标题文字" },
+      "tertiary": { "value": "#737373", "type": "color", "description": "次要信息文字" },
+      "placeholder": { "value": "#A3A3A3", "type": "color", "description": "占位符文字" },
+      "white": { "value": "#FFFFFF", "type": "color", "description": "白色文字（深色背景）" }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "sans": {
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        "type": "fontFamily",
+        "description": "系统默认无衬线字体"
+      }
+    },
+    "fontSize": {
+      "xs": { "value": "12px", "type": "dimension", "description": "徽章、标签" },
+      "sm": { "value": "14px", "type": "dimension", "description": "次要信息" },
+      "base": { "value": "16px", "type": "dimension", "description": "正文" },
+      "lg": { "value": "18px", "type": "dimension", "description": "副标题" },
+      "xl": { "value": "20px", "type": "dimension", "description": "系统标题" },
+      "2xl": { "value": "24px", "type": "dimension", "description": "卡片标题" },
+      "3xl": { "value": "28px", "type": "dimension", "description": "欢迎标题" },
+      "4xl": { "value": "32px", "type": "dimension", "description": "页面主标题" },
+      "5xl": { "value": "36px", "type": "dimension", "description": "统计数字" }
+    },
+    "fontWeight": {
+      "normal": { "value": "400", "type": "number", "description": "常规" },
+      "medium": { "value": "500", "type": "number", "description": "中等-按钮文字" },
+      "semibold": { "value": "600", "type": "number", "description": "半粗-副标题、导航" },
+      "bold": { "value": "700", "type": "number", "description": "粗体-标题、统计数字" }
+    },
+    "lineHeight": {
+      "tight": { "value": "1.25", "type": "number", "description": "紧凑-标题" },
+      "normal": { "value": "1.5", "type": "number", "description": "正常-正文" },
+      "relaxed": { "value": "1.625", "type": "number", "description": "宽松-长文本" }
+    }
+  },
+  "spacing": {
+    "0": { "value": "0px", "type": "dimension" },
+    "1": { "value": "4px", "type": "dimension" },
+    "2": { "value": "8px", "type": "dimension" },
+    "3": { "value": "12px", "type": "dimension" },
+    "4": { "value": "16px", "type": "dimension" },
+    "5": { "value": "20px", "type": "dimension" },
+    "6": { "value": "24px", "type": "dimension" },
+    "8": { "value": "32px", "type": "dimension" },
+    "10": { "value": "40px", "type": "dimension" },
+    "12": { "value": "48px", "type": "dimension" },
+    "16": { "value": "64px", "type": "dimension" }
+  },
+  "borderRadius": {
+    "none": { "value": "0px", "type": "dimension" },
+    "sm": { "value": "4px", "type": "dimension", "description": "徽章" },
+    "base": { "value": "8px", "type": "dimension", "description": "按钮、输入框、标签" },
+    "lg": { "value": "12px", "type": "dimension", "description": "卡片、横幅" },
+    "xl": { "value": "16px", "type": "dimension" },
+    "full": { "value": "9999px", "type": "dimension", "description": "圆形头像" }
+  },
+  "boxShadow": {
+    "sm": {
+      "value": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+      "type": "shadow",
+      "description": "细微阴影-输入框"
+    },
+    "base": {
+      "value": "0 1px 3px 0 rgba(0, 0, 0, 0.1)",
+      "type": "shadow",
+      "description": "标准卡片阴影"
+    },
+    "md": {
+      "value": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      "type": "shadow",
+      "description": "中等阴影-悬停卡片"
+    },
+    "lg": {
+      "value": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+      "type": "shadow",
+      "description": "大阴影-模态框"
+    },
+    "button-primary": {
+      "value": "0 2px 4px rgba(200, 16, 46, 0.2)",
+      "type": "shadow",
+      "description": "主按钮阴影"
+    },
+    "button-primary-hover": {
+      "value": "0 4px 8px rgba(200, 16, 46, 0.3)",
+      "type": "shadow",
+      "description": "主按钮悬停阴影"
+    },
+    "focus": {
+      "value": "0 0 0 4px rgba(200, 16, 46, 0.1)",
+      "type": "shadow",
+      "description": "焦点环阴影"
+    }
+  },
+  "animation": {
+    "duration": {
+      "fast": { "value": "200ms", "type": "duration", "description": "快速反馈-按钮、链接" },
+      "base": { "value": "300ms", "type": "duration", "description": "标准过渡-卡片、下拉" },
+      "slow": { "value": "500ms", "type": "duration", "description": "大型元素-模态框" }
+    },
+    "easing": {
+      "ease-out": {
+        "value": "cubic-bezier(0, 0, 0.2, 1)",
+        "type": "cubicBezier",
+        "description": "按钮、链接"
+      },
+      "ease-in-out": {
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "type": "cubicBezier",
+        "description": "模态框、抽屉"
+      }
+    }
+  }
+}

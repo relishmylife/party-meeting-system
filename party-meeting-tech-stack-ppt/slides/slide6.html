@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720">
+    <title>后端技术栈</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background: #FFFFFF;
+            padding: 80px 120px;
+            display: flex;
+            gap: 60px;
+        }
+        
+        .left-section {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+        
+        .page-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #000000;
+        }
+        
+        .tech-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .tech-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        
+        .tech-icon {
+            width: 32px;
+            height: 32px;
+            color: #C8102E;
+            stroke-width: 2;
+            flex-shrink: 0;
+        }
+        
+        .tech-content {
+            flex: 1;
+        }
+        
+        .tech-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 8px;
+        }
+        
+        .tech-desc {
+            font-size: 20px;
+            font-weight: 400;
+            color: #666666;
+            line-height: 1.5;
+        }
+        
+        .highlight {
+            color: #D4A017;
+            font-weight: 500;
+        }
+        
+        .right-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .backend-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: center;
+        }
+        
+        .diagram-box {
+            width: 280px;
+            height: 60px;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 500;
+            color: #000000;
+            position: relative;
+        }
+        
+        .diagram-box.highlight {
+            border-color: #C8102E;
+            background: rgba(200, 16, 46, 0.05);
+        }
+        
+        .arrow-down {
+            width: 2px;
+            height: 16px;
+            background: #D4A017;
+            position: relative;
+        }
+        
+        .arrow-down::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 6px solid #D4A017;
+        }
+        
+        .page-number {
+            position: absolute;
+            bottom: 40px;
+            right: 120px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #666666;
+        }
+        
+        .logo-small {
+            position: absolute;
+            top: 40px;
+            right: 120px;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #D4A017;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #D4A017;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="logo-small">党</div>
+        
+        <div class="left-section">
+            <h2 class="page-title">后端技术栈</h2>
+            
+            <div class="tech-list">
+                <div class="tech-item">
+                    <i data-lucide="server" class="tech-icon"></i>
+                    <div class="tech-content">
+                        <div class="tech-name">Supabase</div>
+                        <div class="tech-desc">开源Firebase替代品，提供全栈后端服务</div>
+                    </div>
+                </div>
+                
+                <div class="tech-item">
+                    <i data-lucide="database" class="tech-icon"></i>
+                    <div class="tech-content">
+                        <div class="tech-name">PostgreSQL</div>
+                        <div class="tech-desc">企业级关系型数据库，支持<span class="highlight">RLS安全策略</span></div>
+                    </div>
+                </div>
+                
+                <div class="tech-item">
+                    <i data-lucide="zap" class="tech-icon"></i>
+                    <div class="tech-content">
+                        <div class="tech-name">实时订阅</div>
+                        <div class="tech-desc">基于WebSocket的数据同步机制</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <div class="backend-diagram">
+                <div class="diagram-box">客户端请求</div>
+                <div class="arrow-down"></div>
+                <div class="diagram-box highlight">Supabase API</div>
+                <div class="arrow-down"></div>
+                <div class="diagram-box">PostgreSQL</div>
+            </div>
+        </div>
+        
+        <div class="page-number">6 / 10</div>
+    </div>
+    
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

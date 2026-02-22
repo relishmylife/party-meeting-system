@@ -1,0 +1,21 @@
+CREATE TABLE meeting_participants (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    meeting_id UUID NOT NULL,
+    participant_id UUID NOT NULL,
+    participant_name VARCHAR(100),
+    org_id UUID NOT NULL,
+    invited_at TIMESTAMP DEFAULT NOW(),
+    rsvp_status VARCHAR(20) DEFAULT 'pending',
+    rsvp_at TIMESTAMP,
+    checkin_status VARCHAR(20) DEFAULT 'absent',
+    checkin_time TIMESTAMP,
+    checkin_location TEXT,
+    leave_reason TEXT,
+    leave_approved BOOLEAN DEFAULT FALSE,
+    remarks TEXT,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW(),
+    created_by UUID,
+    updated_by UUID,
+    is_deleted BOOLEAN DEFAULT FALSE
+);

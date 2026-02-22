@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720">
+    <title>Edge Functions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background: #FFFFFF;
+            padding: 80px 120px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .page-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 48px;
+        }
+        
+        .diagram-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+        }
+        
+        .edge-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+        }
+        
+        .diagram-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .node-icon {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .node-icon.highlight {
+            border-color: #C8102E;
+            background: rgba(200, 16, 46, 0.05);
+        }
+        
+        .node-icon i {
+            width: 40px;
+            height: 40px;
+            color: #C8102E;
+            stroke-width: 2;
+        }
+        
+        .node-label {
+            font-size: 20px;
+            font-weight: 500;
+            color: #000000;
+        }
+        
+        .diagram-arrow {
+            width: 60px;
+            height: 2px;
+            background: #D4A017;
+            position: relative;
+            margin-top: -48px;
+        }
+        
+        .diagram-arrow::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid #D4A017;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+        
+        .advantages {
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+        }
+        
+        .advantage-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            max-width: 280px;
+        }
+        
+        .advantage-icon {
+            width: 32px;
+            height: 32px;
+            color: #C8102E;
+            stroke-width: 2;
+        }
+        
+        .advantage-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #000000;
+        }
+        
+        .advantage-desc {
+            font-size: 20px;
+            font-weight: 400;
+            color: #666666;
+            text-align: center;
+            line-height: 1.5;
+        }
+        
+        .page-number {
+            position: absolute;
+            bottom: 40px;
+            right: 120px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #666666;
+        }
+        
+        .logo-small {
+            position: absolute;
+            top: 40px;
+            right: 120px;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #D4A017;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #D4A017;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="logo-small">党</div>
+        
+        <h2 class="page-title">Edge Functions</h2>
+        
+        <div class="diagram-section">
+            <div class="edge-diagram">
+                <div class="diagram-node">
+                    <div class="node-icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <div class="node-label">客户端</div>
+                </div>
+                
+                <div class="diagram-arrow"></div>
+                
+                <div class="diagram-node">
+                    <div class="node-icon highlight">
+                        <i data-lucide="server-cog"></i>
+                    </div>
+                    <div class="node-label">Edge Functions</div>
+                </div>
+                
+                <div class="diagram-arrow"></div>
+                
+                <div class="diagram-node">
+                    <div class="node-icon">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <div class="node-label">数据库</div>
+                </div>
+            </div>
+            
+            <div class="advantages">
+                <div class="advantage-item">
+                    <i data-lucide="rocket" class="advantage-icon"></i>
+                    <div class="advantage-title">Serverless架构</div>
+                    <div class="advantage-desc">按需执行，自动扩展，无需服务器维护</div>
+                </div>
+                
+                <div class="advantage-item">
+                    <i data-lucide="code" class="advantage-icon"></i>
+                    <div class="advantage-title">Deno运行时</div>
+                    <div class="advantage-desc">现代TypeScript环境，安全高效</div>
+                </div>
+                
+                <div class="advantage-item">
+                    <i data-lucide="shield" class="advantage-icon"></i>
+                    <div class="advantage-title">安全管理</div>
+                    <div class="advantage-desc">创建管理员、党员账户的安全接口</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-number">8 / 10</div>
+    </div>
+    
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

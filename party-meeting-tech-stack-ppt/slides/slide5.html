@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, height=720">
+    <title>前端技术栈</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 1280px;
+            height: 720px;
+            overflow: hidden;
+            font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background: #FFFFFF;
+            padding: 80px 120px;
+            display: flex;
+            gap: 60px;
+        }
+        
+        .left-section {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .page-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #000000;
+        }
+        
+        .description {
+            font-size: 22px;
+            font-weight: 400;
+            color: #333333;
+            line-height: 1.5;
+        }
+        
+        .right-section {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 40px;
+            align-content: center;
+        }
+        
+        .tech-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .tech-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .react-icon { color: #61DAFB; }
+        .typescript-icon { color: #3178C6; }
+        .vite-icon { color: #646CFF; }
+        .tailwind-icon { color: #06B6D4; }
+        .router-icon { color: #CA4245; }
+        .form-icon { color: #EC5990; }
+        
+        .tech-name {
+            font-size: 20px;
+            font-weight: 400;
+            color: #000000;
+            text-align: center;
+        }
+        
+        .tech-version {
+            font-size: 16px;
+            font-weight: 300;
+            color: #666666;
+        }
+        
+        .page-number {
+            position: absolute;
+            bottom: 40px;
+            right: 120px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #666666;
+        }
+        
+        .logo-small {
+            position: absolute;
+            top: 40px;
+            right: 120px;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #D4A017;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #D4A017;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="logo-small">党</div>
+        
+        <div class="left-section">
+            <h2 class="page-title">前端技术栈</h2>
+            <p class="description">
+                采用React 18生态系统，配合TypeScript实现类型安全开发。
+                使用Vite构建工具提升开发效率，TailwindCSS实现快速UI开发。
+            </p>
+        </div>
+        
+        <div class="right-section">
+            <div class="tech-card">
+                <div class="tech-icon react-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"/>
+                        <ellipse cx="12" cy="12" rx="10" ry="4"/>
+                        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/>
+                        <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/>
+                    </svg>
+                </div>
+                <div class="tech-name">React</div>
+                <div class="tech-version">v18</div>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-icon typescript-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <rect width="24" height="24" rx="2"/>
+                        <text x="12" y="17" font-size="14" fill="white" text-anchor="middle" font-weight="bold">TS</text>
+                    </svg>
+                </div>
+                <div class="tech-name">TypeScript</div>
+                <div class="tech-version">v5.x</div>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-icon vite-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 3l9 18H3L12 3z"/>
+                        <path d="M12 8l5 10H7l5-10z" fill="currentColor" opacity="0.3"/>
+                    </svg>
+                </div>
+                <div class="tech-name">Vite</div>
+                <div class="tech-version">v5.x</div>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-icon tailwind-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35.98 1 2.09 2.15 4.59 2.15 2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C15.61 7.15 14.5 6 12 6zM7 12c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.3.74 1.91 1.35C8.39 16.85 9.5 18 12 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C10.61 13.15 9.5 12 7 12z"/>
+                    </svg>
+                </div>
+                <div class="tech-name">Tailwind CSS</div>
+                <div class="tech-version">v3.x</div>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-icon router-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 7h6v10H3zM15 7h6v10h-6z"/>
+                        <path d="M9 12h6"/>
+                    </svg>
+                </div>
+                <div class="tech-name">React Router</div>
+                <div class="tech-version">v6.x</div>
+            </div>
+            
+            <div class="tech-card">
+                <div class="tech-icon form-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="4" y="4" width="16" height="16" rx="2"/>
+                        <path d="M8 10h8M8 14h5"/>
+                    </svg>
+                </div>
+                <div class="tech-name">Hook Form</div>
+                <div class="tech-version">v7.x</div>
+            </div>
+        </div>
+        
+        <div class="page-number">5 / 10</div>
+    </div>
+</body>
+</html>
